@@ -58,6 +58,7 @@
     <Compile Include="ShovelRunnerTests.cs" />
     <Compile Include="ShovelAcceptanceTestsBase.cs" />
     <Compile Include="ShovelRunnerUndefinedTaskExceptionHandlingTests.cs" />
+    <Compile Include="TaskActions\TransformXML\XmlTransformerTests.cs" />
     <Compile Include="Tasks\TaskManagerTests.cs" />
     <Compile Include="TaskTests.cs" />
   </ItemGroup>
@@ -68,7 +69,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TaskActions\TransformXML\transform-source.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TaskActions\TransformXML\transform-xdt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

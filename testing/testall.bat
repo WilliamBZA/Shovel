@@ -31,3 +31,8 @@ echo *** General tests...
 scriptcs test-general.csx -loglevel Error -- -tasks:TheTask
 echo *** Done ***
 echo.
+
+echo *** XML Transformation tests...
+scriptcs test-xdt.csx -loglevel Error -- -tasks:TransformXMLTest
+echo *** Done ***
+echo.
